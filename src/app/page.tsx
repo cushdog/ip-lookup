@@ -19,6 +19,7 @@ interface IPInfo {
   org: string
   postal: string
   timezone: string
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   [key: string]: any
 }
 
@@ -41,6 +42,7 @@ export default function Home() {
       }
       const json = await res.json()
       setData(json)
+      /* eslint-disable  @typescript-eslint/no-explicit-any */
     } catch (err: any) {
       setError(err.message)
     } finally {
